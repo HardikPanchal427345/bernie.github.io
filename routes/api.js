@@ -43,7 +43,7 @@ MongoClient.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/MyBern
     if (!err) {
         console.log('Mongodb connected Successfully..');
     } else {
-        console.log('Error in dbconnection New with MonoClient:' + JSON.stringify(err, undefined, 2))
+        console.log('Error in dbconnection New with MonoClient:' + JSON.stringify(err, undefined, 2));
     }
 })
 
