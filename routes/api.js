@@ -24,7 +24,7 @@ const Transaction = require('../models/transaction')
 
 const mongoose = require('mongoose')
 mongoose.set('useFindAndModify', false);
-mongoose.connect('mongodb://localhost:27017/MyBernie', (err) => {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/MyBernie', (err) => {
 
     // mongoose.connect('mongodb+srv://hardikpanchal:89807270@mybernie-bs6iw.mongodb.net/MyBernie', (err) => {
     if (!err) {
