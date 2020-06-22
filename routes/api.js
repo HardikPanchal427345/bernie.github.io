@@ -3,8 +3,6 @@ const jwt = require('jsonwebtoken');
 const router = express.Router();
 const multer = require('multer');
 
-var mongodb = require('mongodb');
-var MongoClient = mongodb.MongoClient;
 
 const nodemailer = require('nodemailer');
 
@@ -28,24 +26,24 @@ const Transaction = require('../models/transaction')
 const mongoose = require('mongoose')
 mongoose.set('useFindAndModify', false);
 
-// mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/MyBernie', (err) => {
+mongoose.connect('mongodb+srv://hardikpanchal:89807270@mybernie-bs6iw.mongodb.net/MyBernie?retryWrites=true&w=majority', (err) => {
+
+        // mongoose.connect('mongodb+srv://hardikpanchal:89807270@mybernie-bs6iw.mongodb.net/MyBernie', (err) => {
+        if (!err) {
+            console.log('Mongodb connected Successfully..');
+        } else {
+            console.log('Error in dbconnection New:' + JSON.stringify(err, undefined, 2))
+        }
+    })
+    // MongoClient.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/MyBernie', (err) => {
 
 //     // mongoose.connect('mongodb+srv://hardikpanchal:89807270@mybernie-bs6iw.mongodb.net/MyBernie', (err) => {
 //     if (!err) {
 //         console.log('Mongodb connected Successfully..');
 //     } else {
-//         console.log('Error in dbconnection New:' + JSON.stringify(err, undefined, 2))
+//         console.log('Error in dbconnection New with MonoClient:' + JSON.stringify(err, undefined, 2));
 //     }
 // })
-MongoClient.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/MyBernie', (err) => {
-
-    // mongoose.connect('mongodb+srv://hardikpanchal:89807270@mybernie-bs6iw.mongodb.net/MyBernie', (err) => {
-    if (!err) {
-        console.log('Mongodb connected Successfully..');
-    } else {
-        console.log('Error in dbconnection New with MonoClient:' + JSON.stringify(err, undefined, 2));
-    }
-})
 
 router.get('/', (req, res) => {
     res.send('From API route')
