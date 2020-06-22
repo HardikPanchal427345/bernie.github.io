@@ -30,7 +30,7 @@ mongoose.connect('mongodb://localhost:27017/MyBernie', (err) => {
     if (!err) {
         console.log('Mongodb connected Successfully..');
     } else {
-        console.log('Error in dbconnection :' + JSON.stringify(err, undefined, 2))
+        console.log('Error in dbconnection New:' + JSON.stringify(err, undefined, 2))
     }
 })
 
