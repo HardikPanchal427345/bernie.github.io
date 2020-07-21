@@ -1402,7 +1402,7 @@ function PlatinumComponent_div_0_Template(rf, ctx) { if (rf & 1) {
 } if (rf & 2) {
     const competition_r113 = ctx.$implicit;
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpropertyInterpolate1"]("src", "http://localhost:3000/", competition_r113.image, "", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsanitizeUrl"]);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpropertyInterpolate1"]("src", "http://winwithbernie.herokuapp.com/", competition_r113.image, "", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsanitizeUrl"]);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](competition_r113.title);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
