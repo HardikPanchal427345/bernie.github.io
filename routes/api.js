@@ -34,7 +34,7 @@ mongoose.connect('mongodb+srv://hardikpanchal:89807270@mybernie-bs6iw.mongodb.ne
         } else {
             console.log('Error in dbconnection New:' + JSON.stringify(err, undefined, 2))
         }
-    })
+    });
     // MongoClient.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/MyBernie', (err) => {
 
 //     // mongoose.connect('mongodb+srv://hardikpanchal:89807270@mybernie-bs6iw.mongodb.net/MyBernie', (err) => {

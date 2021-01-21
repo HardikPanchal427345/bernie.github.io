@@ -13,10 +13,10 @@ const api = require('./routes/api')
 const app = express()
 app.use(cors())
 app.use('/uploads', express.static('uploads'));
-app.use(bodyparser.json())
+app.use(bodyparser.json());
 
 app.use(express.static(__dirname + '/newproject'));
-app.use('/api', api)
+app.use('/api', api);
 app.get('/', function(req, res) {
     // res.send('HELLO FROM SERVER')
     res.sendFile(path.join(__dirname, 'newproject/index.html'));
