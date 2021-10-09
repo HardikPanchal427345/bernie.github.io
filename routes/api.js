@@ -111,7 +111,7 @@ router.post('/login', (req, res) => {
 
     User.findOne({ email: userData.email }, (error, user) => {
         if (error) {
-            console.log(error)
+            console.log(error);
         } else {
             if (!user) {
                 res.status(401).send('Invalid email')
